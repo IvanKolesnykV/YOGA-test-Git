@@ -162,20 +162,28 @@ a{
     }
   }
 }
+.box-sizing (@type: border-box) {
+	-webkit-box-sizing: @type;
+	   -moz-box-sizing: @type;
+	        box-sizing: @type;
+}
 //font
 @font-face {
 	.font(opensans-semibold);
 }
-//start
-.wrapper{
-	margin: 10px auto 0;
-	width: 98%;
-	position: relative;
-}
+
 //header
 #header{
 	background: #fff;
 	position: relative;
+	width: 100%;
+	z-index: 5;
+	.media(tablet-with {
+		overflow: hidden;
+		-webkit-box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.1);
+		-moz-box-shadow:    0px 1px 5px 0px rgba(50, 50, 50, 0.1);
+		box-shadow:         0px 1px 5px 0px rgba(50, 50, 50, 0.1);
+	});
 	.clearfix();
 	.logo{
 		.clearfix();
@@ -229,7 +237,7 @@ a{
 		}
 	.nav{
 		position: absolute;
-		top: 110px;
+		top: 107px;
 		left: 0;
 		width: 100%;
 		background: rgba(255, 255, 255, 0.5);
@@ -261,16 +269,16 @@ a{
 				a{
 					line-height: 1.2;
 					display:block;
-					padding: 10px 0;
-					margin: 40px 20px;
+					padding: 10px 0;					
 					font: 14px opensans-semibold;
 					.transition();
 					color: #555;
 					text-transform: capitalize;
 					position: relative;
 					.media(tablet-with {
-					display: inline-block;
-					padding: 5px;
+						margin: 40px 20px;
+						display: inline-block;
+						padding: 5px;
 					});
 					&:after{
 						content: '';
@@ -321,7 +329,48 @@ a{
 .open-span-span-span{
 	.transform(rotate(-45deg) translateY(4px) translateX(-5px));
 }
-
+//slider
 #slider{
-	height: 1000px;
+	background: #6675e2;	
+	text-align: center;
+	padding-top: 100px;
+	.media(tablet-with {
+		background: url(../img/slider.jpg);
+		});	
+	form{
+	background: #fff;
+	padding: 40px 30px 35px;
+	margin: 0 10px;
+	.border-radius(20px);
+		p{
+			font: 25px opensans-semibold;
+			color: #5363db;
+			text-transform: capitalize;
+			margin-bottom: 15px;
+			.float(left);
+		}
+		input , .slider-select select{
+			font: 14px 'Open Sans', sans-serif;
+    		color: #888;
+    		.border-radius(8px);
+    		background-color: #f2f2f2;
+    		width: 100%;
+    		height: 48px;
+    		outline: 0;
+    		border: 0;
+    		padding-left: 10px;
+    		margin-top: 15px;
+    		.box-sizing();
+    		}
+		input[type="text"]{}
+		input[type="tel"]{}
+		.slider-select{}
+		button{
+			.float(right);
+		}
+	}
+	.slider-text{
+		h1{}
+		p{}
+	}
 }
