@@ -163,10 +163,11 @@ a{
   }
 }
 //font
-
+@font-face {
+	.font(opensans-semibold);
+}
 //start
 .wrapper{
-	border: 1px #c9c9c9 solid;
 	margin: 10px auto 0;
 	width: 98%;
 	position: relative;
@@ -178,9 +179,15 @@ a{
 	.clearfix();
 	.logo{
 		.clearfix();
-		margin: 25px 0 30px 9.4%;
+		margin: 15px 50px;
 		.float(left);
 		text-align: center;
+		.media(tablet-with {
+			position: absolute;
+    		left: 50%;
+    		margin-left: -20px;
+    		z-index: 5;
+		});
 	}
 	button{
 		position: relative;
@@ -222,53 +229,65 @@ a{
 		left: 0;
 		width: 100%;
 		background: rgba(255, 255, 255, 0.5);
-		z-index: 5;
+		z-index: 4;
 		.media(tablet-with {
-			float: right;
 			position: relative;
 			top: auto;
 			left: auto;
-			width: auto;
-			margin-right: 9.4%;
-		});
+			padding-top: 80px;
+			});
+			.media(desktop-xs {
+				padding-top: 0;
+			});
 		ul{
 			text-align: center;
 			font-size: 0;
-			.transition(@duration: 0.7s);
+			.transition(@duration: 0.7s);			
+				li:nth-child(3){
+					a{
+						.media(desktop-xs {
+						margin-right: 365px;
+						});
+					}
+				}			
 			li{
 				.media(tablet-with {
 				display: inline;
 				});
 				a{
+					line-height: 1.2;
 					display:block;
 					padding: 10px 0;
-					font-size: 15px;
+					margin: 40px 20px;
+					font: 14px opensans-semibold;
 					.transition();
 					color: #555;
 					text-transform: capitalize;
 					position: relative;
 					.media(tablet-with {
 					display: inline-block;
-					padding: 45px 20px;
-					});
-					.media(desktop-md {
-						font-size: 26px;
+					padding: 5px;
 					});
 					&:after{
-							content: '';
-							position: absolute;
-							bottom: 0;
-							left: 50%;
-							height: 3px;
-							width: 0;
-							.transition();
-						}
+						content: '';
+						position: absolute;
+						bottom: 0;
+						left: 50%;
+						height: 1px;
+						width: 0;
+						.transition();						
+						}						
 					&:hover{
 						color: #5363db;
 						&:after{
 							width: 100%;
 							left: 0;
 							background: #5363db;
+							.media(tablet-with {
+							width: 50%;
+    						left: 25%;
+    						right: 25%
+						});
 						}
 					}
 				}
