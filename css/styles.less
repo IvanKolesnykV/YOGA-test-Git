@@ -184,9 +184,13 @@ a{
 		text-align: center;
 		.media(tablet-with {
 			position: absolute;
-    		left: 50%;
-    		margin-left: -20px;
+    		left: 0;
+    		top: 0;
     		z-index: 5;
+		});
+		.media(desktop-xs {
+			left: 50%;
+			margin-left: -20px;
 		});
 	}
 	button{
@@ -234,10 +238,10 @@ a{
 			position: relative;
 			top: auto;
 			left: auto;
-			padding-top: 80px;
+			padding-left: 80px;
 			});
-			.media(desktop-xs {
-				padding-top: 0;
+		.media(desktop-xs {
+			padding-left: 0;
 			});
 		ul{
 			text-align: center;
@@ -316,4 +320,8 @@ a{
 }
 .open-span-span-span{
 	.transform(rotate(-45deg) translateY(4px) translateX(-5px));
+}
+
+#slider{
+	height: 1000px;
 }
