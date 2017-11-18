@@ -29,3 +29,5 @@ $('#header').css({
 $('#slider').css({"margin-top" : heightHeader + "px"});
 }
 };
+
+//carusel
