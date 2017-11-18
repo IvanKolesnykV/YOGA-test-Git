@@ -592,7 +592,7 @@ a {
   left: 50%;
   margin: 0 0 -30px -30px;
   padding: 30px;
-  background: url(../img/png.png) no-repeat center, #ffffff;
+  background: url(../img/png.png) no-repeat 18px 18px, #ffffff;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -783,4 +783,66 @@ a {
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
+}
+#features {
+  background: #6c7ae2;
+  padding: 120px 0 80px;
+}
+@media (min-width: 1280px) {
+  #features {
+    background: url(../img/features.jpg) no-repeat center;
+  }
+}
+#features .wrraper {
+  display: inline-block;
+  max-width: 1300px;
+}
+#features .wrraper .features {
+  width: 275px;
+  display: inline-block;
+  color: #fff;
+  margin: 0 15px 50px;
+}
+#features .wrraper .features .img {
+  display: inline-block;
+  padding: 34px;
+  background: url(../img/png.png) -34px 5px;
+  border: 1px #fff solid;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+#features .wrraper .features h6 {
+  font-size: 18px;
+  font-weight: 700;
+  width: 180px;
+  margin: 30px auto 15px;
+  height: 50px;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+#features .wrraper .features p {
+  font-size: 16px;
+  font-weight: 400;
+}
+#features .wrraper .features + .features .img {
+  background-position: -95px -2px;
+}
+#features .wrraper .features + .features + .features .img {
+  background-position: -162px 4px;
+}
+#features .wrraper .features + .features + .features + .features .img {
+  background-position: -233px 0px;
+}
+#features .wrraper .features + .features + .features + .features + .features .img {
+  background-position: -292px 0px;
+}
+#features .wrraper .features + .features + .features + .features + .features + .features .img {
+  background-position: -355px -2px;
+}
+#features .wrraper .features + .features + .features + .features + .features + .features + .features .img {
+  background-position: -429px -1px;
+}
+#features .wrraper .features + .features + .features + .features + .features + .features + .features + .features .img {
+  background-position: -489px -3px;
 }
