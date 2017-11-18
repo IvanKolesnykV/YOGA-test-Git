@@ -545,3 +545,85 @@ a {
 #our-classes .wrraper .bottum .div .left {
   background-position: -273px -304px;
 }
+#gallery {
+  display: none;
+  text-align: center;
+  font-size: 0;
+}
+@media (min-width: 480px) {
+  #gallery {
+    display: block;
+  }
+}
+@media (min-width: 480px) {
+  #gallery {
+    display: block;
+  }
+}
+#gallery div {
+  width: 480px;
+  height: 349px;
+  display: inline-block;
+  background: url(../img/img.jpg) 0 -608px;
+  position: relative;
+}
+#gallery div:before {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #5363db;
+}
+#gallery div:after {
+  top: 50%;
+  left: 50%;
+  margin: 0 0 -30px -30px;
+  padding: 30px;
+  background: url(../img/png.png) no-repeat center, #ffffff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+#gallery div:before,
+#gallery div:after {
+  content: '';
+  position: absolute;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+#gallery div:hover:before {
+  -webkit-opacity: 0.8;
+  -moz-opacity: 0.8;
+  opacity: 0.8;
+}
+#gallery div:hover:after {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+#gallery div + div {
+  background-position: -481px -608px;
+}
+#gallery div + div + div {
+  background-position: -962px -608px;
+}
+#gallery div + div + div + div {
+  background-position: -1442px -608px;
+}
+#gallery div + div + div + div + div {
+  background-position: -2px -959px;
+}
+#gallery div + div + div + div + div + div {
+  background-position: -482px -958px;
+}
+#gallery div + div + div + div + div + div + div {
+  background-position: -962px -959px;
+}
+#gallery div + div + div + div + div + div + div + div {
+  background-position: -1442px -959px;
+}
