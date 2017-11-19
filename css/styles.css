@@ -568,11 +568,6 @@ a {
     display: block;
   }
 }
-@media (min-width: 480px) {
-  #gallery {
-    display: block;
-  }
-}
 #gallery div {
   width: 480px;
   height: 349px;
@@ -798,7 +793,7 @@ a {
   max-width: 1300px;
 }
 #features .wrraper .features {
-  width: 275px;
+  width: 270px;
   display: inline-block;
   color: #fff;
   margin: 0 15px 50px;
@@ -824,6 +819,7 @@ a {
 #features .wrraper .features p {
   font-size: 16px;
   font-weight: 400;
+  line-height: 1.6;
 }
 #features .wrraper .features + .features .img {
   background-position: -95px -2px;
@@ -845,4 +841,94 @@ a {
 }
 #features .wrraper .features + .features + .features + .features + .features + .features + .features + .features .img {
   background-position: -489px -3px;
+}
+#wrraper #prises {
+  display: inline-block;
+  max-width: 1300px;
+  margin: 50px 0;
+}
+#wrraper #prises .prise {
+  margin: 50px 15px;
+  overflow: hidden;
+  color: #fff;
+  width: 290px;
+  display: inline-block;
+  position: relative;
+  -webkit-box-shadow: 6px 6px 30px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 6px 6px 30px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 6px 6px 30px 0px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+@media (min-width: 480px) {
+  #wrraper #prises .prise {
+    width: 370px;
+  }
+}
+#wrraper #prises .prise button {
+  font-size: 18px;
+  font-weight: 700;
+  background: #5b6ceb;
+  padding: 15px 45px;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  border: 0;
+  color: #fff;
+  width: 170px;
+  margin-left: -85px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+#wrraper #prises .prise button:hover,
+#wrraper #prises .prise button:hover + h3 {
+  background: #5b7aeb;
+}
+#wrraper #prises .prise h3 {
+  padding: 25px 0;
+  background: #5b6ceb;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-size: 67px;
+  font-weight: 700;
+}
+#wrraper #prises .prise h3 span {
+  font-size: 32px;
+}
+#wrraper #prises .prise h3 span {
+  font-size: 18px;
+}
+#wrraper #prises .prise p {
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 17px 0;
+  color: #555;
+}
+#wrraper #prises .prise .linear {
+  position: relative;
+}
+#wrraper #prises .prise .linear:after,
+#wrraper #prises .prise .linear:before {
+  content: '';
+  position: absolute;
+  width: 40%;
+  left: 30%;
+  height: 1px;
+  background: #d7d7d7;
+}
+#wrraper #prises .prise .linear:after {
+  top: 0;
+}
+#wrraper #prises .prise .linear:before {
+  bottom: 0;
+}
+#wrraper #prises .prise p + p + p {
+  margin-bottom: 130px;
 }

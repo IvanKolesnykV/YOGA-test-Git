@@ -126,12 +126,6 @@ font-weight: @weight;
     }
   }
 
-  & when (@screen = mobile-with) {
-    @media (min-width: 480px) {
-      @rules();
-    }
-  }
-
   & when (@screen = tablet) {
     @media (min-width: 640px) {
       @rules();
@@ -722,7 +716,7 @@ font-weight: @weight;
 		display: inline-block;
 		max-width: 1300px;
 		.features{
-			width: 275px;
+			width: 270px;
 			display: inline-block;
 			color: #fff;
 			margin: 0 15px 50px;
@@ -743,6 +737,7 @@ font-weight: @weight;
 			}
 			p{
 				.font-size(@px: 16px);
+				line-height: 1.6;
 			}
 		}
 		.features+.features{
@@ -783,6 +778,82 @@ font-weight: @weight;
 	}
 }
 
+//prises
+
+#wrraper{
+	#prises{
+		display: inline-block;
+		max-width: 1300px;
+		margin: 50px 0;
+		.prise{
+			margin: 50px 15px;
+			overflow: hidden;
+			color: #fff;
+			width: 290px;
+			display: inline-block;
+			position: relative;
+			-webkit-box-shadow: 6px 6px 30px 0px rgba(0, 0, 0, 0.1);
+			-moz-box-shadow:    6px 6px 30px 0px rgba(0, 0, 0, 0.1);
+			box-shadow:         6px 6px 30px 0px rgba(0, 0, 0, 0.1);
+			.border-radius();
+			.media(mobile-with {
+				width: 370px;
+			});			
+			button{
+				.font-size(@px: 18px; @weight: 700);				
+				background: #5b6ceb;
+				padding: 15px 45px;
+				position: absolute;
+				bottom: 50px;
+				left: 50%;
+				border: 0;
+				color: #fff;
+				width: 170px;
+				margin-left: -85px;
+				.border-radius(20px);
+				.transition(@duration: 0.5s);
+				&:hover, &:hover+h3{
+					background: #5b7aeb;
+				}
+			}
+			h3{
+				padding: 25px 0;
+				background: #5b6ceb;
+				text-transform: uppercase;
+				margin-bottom: 30px;
+				.font-size(@px: 67px; @weight: 700);
+				span{font-size: 32px;}
+				span{font-size: 18px;}
+			}
+			p{
+				.font-size(@px: 18px);
+				text-transform: uppercase;
+				padding: 17px 0;
+				color: #555;
+			}
+			.linear{
+				position: relative;
+				&:after, &:before{
+					content: '';
+					position: absolute;
+					width: 40%;
+					left: 30%;
+					height: 1px;
+					background: #d7d7d7;
+				}
+				&:after{
+					top: 0;
+				}
+				&:before{
+					bottom: 0;
+				}
+			}
+			p+p+p{
+				margin-bottom: 130px;
+			}
+		}
+	}
+}
 
 
 
